@@ -1,41 +1,33 @@
-# Catppuccin Mocha Alacritty Theme
+# Colors (Gruvbox dark)
 
+# Default colors
 [colors.primary]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+# hard contrast background = = '#1d2021'
+background = '#282828'
+# soft contrast background = = '#32302f'
+foreground = '#ebdbb2'
 
+# Normal colors
 [colors.normal]
-black   = "#45475a"
-red     = "#f38ba8"
-green   = "#a6e3a1"
-yellow  = "#f9e2af"
-blue    = "#89b4fa"
-magenta = "#f5c2e7"
-cyan    = "#94e2d5"
-white   = "#bac2de"
+black   = '#282828'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#a89984'
 
+# Bright colors
 [colors.bright]
-black   = "#585b70"
-red     = "#f38ba8"
-green   = "#a6e3a1"
-yellow  = "#f9e2af"
-blue    = "#89b4fa"
-magenta = "#f5c2e7"
-cyan    = "#94e2d5"
-white   = "#a6adc8"
-
-# Optional (recommended): dim colors
-[colors.dim]
-black   = "#313244"
-red     = "#e64553"
-green   = "#89d18a"
-yellow  = "#e6d087"
-blue    = "#74a2e8"
-magenta = "#d8a9d1"
-cyan    = "#7cc8bc"
-white   = "#9399b2"
-
-# ----- Window Settings -----
+black   = '#928374'
+red     = '#fb4934'
+green   = '#b8bb26'
+yellow  = '#fabd2f'
+blue    = '#83a598'
+magenta = '#d3869b'
+cyan    = '#8ec07c'
+white   = '#ebdbb2'
 
 [window.dimensions]
 columns = 70
@@ -43,10 +35,7 @@ lines = 17
 
 [window.padding]
 x = 70
-y = 70
-
-# ----- Font -----
+y = 70       # vertical padding in pixels
 
 [font]
-size = 10.0
-
+size = 10.0  # smaller font size

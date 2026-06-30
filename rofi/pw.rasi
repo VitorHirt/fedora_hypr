@@ -3,30 +3,30 @@ configuration {
 }
 
 * {
-        background: rgba(255, 255, 255, 0.1);  
-    foreground: rgba(0, 0, 0, 0.5);  /* light grey */
-    background-alt: rgba(255, 255, 255, 0.1);   /* darker grey */
-    selected:  rgba(255, 255, 255, 0.2);                    /* medium grey */
-    active:  #9e9e9e;                      /* soft grey */
-    urgent:  #b85c5c;                      /* kept slightly red */
+
+    background: #3c3836;
+    background-alt: #4d423d;
+    selected: #d65d0e;
+    active:  #458588;
+    urgent:  #B7251E;
+    border-color: #dd8d68;
 }
 
 window {
     transparency: "real";
-    location: north;
+    location:north;
     anchor: center;
-    fullscreen: false;
-    width: 502px;
+    fullscreen:false;
+     width:  500px;
     height: 200px;
 
     border-radius: 100px;
-    border: 1px;
-    border-color: rgba(202,204,224,0.0);  /* fully transparent */
+    border:0px;
 
-    background-color: @background;       /* RGBA for blur */
-    padding: 20px;
-    x-offset: 0px;
-    y-offset: 10px;
+    background-color: @background;
+    padding:20px;
+     x-offset:0px;
+    y-offset:10px;
 }
 
 mainbox {
@@ -36,31 +36,31 @@ mainbox {
 }
 
 listview {
-    enabled: true;
+    enabled:true;
     columns: 3;
     lines: 3;
-    spacing: 20px;
+    spacing:20px;
     margin: 10px;
     layout: horizontal;
-    dynamic: false;
+    dynamic:false;
     background-color: transparent;
     cursor: "default";
 }
 
 element {
-    enabled: true;
-    padding: 38px 20px;
+    enabled:true;
+    padding:38px 20px;
 
-    border-radius: 100%;
-    background-color: rgba(49,50,68,0.55);  /* @background-alt as RGBA */
-    text-color: #B9C1DD;
+    border-radius:100%;
+    background-color: @background-alt;
+    text-color: #ebdbb2;
     cursor: pointer;
 }
 
 element-text {
     font: "Font Awesome 6 Free Solid 40";
     background-color: transparent;
-    text-color: inherit;
+    text-color:  inherit;
     vertical-align: 0.5;
     horizontal-align: 0.5;
     cursor: pointer;
@@ -68,6 +68,7 @@ element-text {
 
 element selected.normal {
     background-color: var(selected);
-    text-color: #ffffff;
+    text-color:  var(background);
 }
+
 

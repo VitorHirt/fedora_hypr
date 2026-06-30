@@ -20,6 +20,10 @@ rm -rf ~/walls
 
 cp -r ~/.config/niricold/walls ~/
 
+rm -rf ~/awalls
+
+cp -r ~/.config/niricold/awalls ~/
+
 
 cp -r ~/.config/niricold/fish ~/.config/
 

@@ -2,9 +2,8 @@
     pkill rofi
 if pgrep -f "conky -c /home/linuxfam/.config/conky/bars22/bars.conf" >/dev/null; then
     pkill conky
-    pkill cava
 else
     conky -c "$HOME/.config/conky/bars22/bars.conf" &
-    ~/.config/alacritty/cavarun.sh &
+
 fi
 

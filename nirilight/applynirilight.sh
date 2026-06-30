@@ -19,6 +19,10 @@ rm -rf ~/walls
 
 cp -r ~/.config/nirilight/walls ~/
 
+rm -rf ~/awalls
+
+cp -r ~/.config/nirilight/awalls ~/
+
 
 cp -r ~/.config/nirilight/fish ~/.config/
 

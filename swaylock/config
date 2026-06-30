@@ -20,18 +20,18 @@ indicator-thickness=7
 indicator-x-position=960
 indicator-y-position=540
 
-# === Cores Catppuccin Mocha com transparência ===
-inside-color=1e1e2e00
-inside-clear-color=f9e2af40
-inside-caps-lock-color=f38ba840
-inside-ver-color=a6e3a140
-inside-wrong-color=f38ba840
+# === Cores Gruvbox com transparência ===
+inside-color=28282800
+inside-clear-color=d7992140
+inside-caps-lock-color=cc241d40
+inside-ver-color=689d6a40
+inside-wrong-color=cc241d40
 
-ring-color=cdd6f499
-ring-clear-color=f9e2af
-ring-caps-lock-color=f38ba8
-ring-ver-color=a6e3a1
-ring-wrong-color=f38ba8
+ring-color=ebdbb299
+ring-clear-color=d79921
+ring-caps-lock-color=cc241d
+ring-ver-color=689d6a
+ring-wrong-color=cc241d
 
 line-color=00000000
 line-clear-color=00000000
@@ -41,14 +41,14 @@ line-wrong-color=00000000
 
 separator-color=00000000
 
-key-hl-color=89b4fa
-bs-hl-color=f38ba8
+key-hl-color=98971a
+bs-hl-color=cc241d
 
-text-color=cdd6f4
-text-clear-color=1e1e2e
-text-caps-lock-color=cdd6f4
-text-ver-color=1e1e2e
-text-wrong-color=cdd6f4
+text-color=ebdbb2
+text-clear-color=282828
+text-caps-lock-color=ebdbb2
+text-ver-color=282828
+text-wrong-color=ebdbb2
 
 # Esconde textos desnecessários, deixa só o relógio
 hide-keylayout

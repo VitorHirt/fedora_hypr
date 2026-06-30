@@ -19,6 +19,10 @@ rm -rf ~/walls
 
 cp -r ~/.config/niriwarm/walls ~/
 
+rm -rf ~/awalls
+
+cp -r ~/.config/niriwarm/awalls ~/
+
 
 cp -r ~/.config/niriwarm/fish ~/.config/
 

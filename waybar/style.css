@@ -1,24 +1,42 @@
 * {
     font-family: JetBrainsMono Nerd Font;
-    font-size: 15px;
+    font-size: 15px; /* slightly smaller font */
     min-height: 0;
 }
 
+/* =======================
+   MAIN BAR
+   ======================= */
 #waybar {
-    background-color: rgb(49, 50, 68); /* semi-transparent */
-    color: #cdd6f4;
-    margin: 5px 5px;
+    background: transparent;
+    color: #ebdbb2;
+    margin: 3px; /* smaller margin */
+    margin-bottom: 0px;
 }
 
+/* =======================
+   SECTION CONTAINERS
+   ======================= */
+.modules-center {
+    background: #3c3836;
+    margin: 3px;
+    padding: 4px; /* smaller padding */
+    border-radius: 1.5rem;
+}
+
+.modules-left,
+.modules-right {
+    background-color: transparent;
+    margin: 3px;
+    padding: 4px;
+}
+
+/* =======================
+   BASE MODULE STYLE
+   ======================= */
 #bluetooth,
 #temperature,
 #custom-gallery,
-#custom-docker,
-#custom-vscode,
-#custom-terminal,
-#custom-google,
-#custom-navicat,
-#custom-files,
 #clock,
 #battery,
 #pulseaudio,
@@ -26,146 +44,210 @@
 #cpu,
 #memory,
 #custom-menuApp,
+#custom-docker,
+#custom-vscode,
+#custom-navicat,
+#custom-terminal,
+#custom-google,
+#custom-files,
 #custom-power,
-#custom-switcher,
-#workspaces {
-    background-color: rgba(49,50,68,0); /* semi-transparent */
-    padding: 9px;
-    margin: 0px;
-    margin-top: 3px;
-    transition: all 0.4s ease;
+#custom-switcher {
+    background-color: #3c3836;
+    padding: 6px; /* smaller padding */
+    margin: 2px;  /* smaller margin */
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 3px rgba(0,0,0,0.35);
+}
+
+/* =======================
+   INDIVIDUAL MODULE TWEAKS
+   ======================= */
+#custom-menuApp {
+    border-radius: 1.5rem 0.5rem 0.5rem 1.5rem;
+    color: #d65d0e;
+    padding-right: 10px;
+}
+#custom-menuApp:hover {
+    background-color: #774c2f;
+    border-radius: 0.8rem;
+}
+
+#custom-gallery {
+    border-radius: 0.5rem 1.5rem 1.5rem 0.5rem;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #d65d0e;
+}
+#custom-gallery:hover {
+    background-color: #5c483a;
+    border-radius: 0.8rem;
+}
+
+#custom-switcher {
+    color: #d65d0e;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+#custom-docker {
+    color: #b8bb26;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+#custom-vscode {
+    color: #83a598;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+#custom-navicat {
+    color: #fe8019;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+#custom-terminal {
+    color: #458588;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+#custom-google {
+    color: #8ec07c;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+#custom-files {
+    color: #d3869b;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+#custom-docker:hover,
+#custom-vscode:hover,
+#custom-navicat:hover,
+#custom-terminal:hover,
+#custom-google:hover,
+#custom-files:hover {
+    background-color: #4a403d;
+    border-radius: 0.8rem;
+}
+
+#custom-switcher:hover {
+    background-color: #774c2f;
+    border-radius: 0.8rem;
+}
+
+#custom-power {
+    border-radius: 0.5rem 1.5rem 1.5rem 0.5rem;
+    color: #fb4934;
+    padding-left: 15px;
+    padding-right: 18px;
+}
+#custom-power:hover {
+    background-color: #8d463e;
+    border-radius: 0.8rem;
+}
+
+/* =======================
+   STATUS MODULE COLORS
+   ======================= */
+#pulseaudio {
+    color: #fabd2f;
+    padding-left: 7px;
+    padding-right: 12px;
 }
 
 #bluetooth {
-    margin-left: 0.1px;
-    margin-right: 0px;
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
-    color: #f38ba8;
-    padding-left: 17px;
-    padding-right: 17px;
+    color: #fb4934;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+#bluetooth.off { color: #458588; }
+#bluetooth.on { color: #b8bb26; }
+#bluetooth.disabled { color: #458588; }
+
+#network {
+    color: #fabd2f;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
-#bluetooth.off { color: #8bd5ca; }
-#bluetooth.on { color: #a6e3a1; }
-#bluetooth.disabled { color: #8bd5ca; }
+#cpu {
+    color: #b8bb26;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#memory {
+    color: #8ec07c;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#temperature {
+    color: #fb4934;
+    padding-left: 12px;
+    padding-right: 12px;
+}
 
 #battery {
-    margin-left: 0.1px;
-    margin-right: 0px;
-    border-radius: 0.5rem;
-    color: #f9e2af;
-    padding-left: 0px;
-    padding-right: 15px;
+    color: #fabd2f;
+    padding-right: 10px;
 }
-#battery.charging { color: #a6e3a1; }
-#battery.warning:not(.charging) { color: #f38ba8; }
+#battery.charging { color: #b8bb26; }
+#battery.warning:not(.charging) { color: #fb4934; }
 
-#backlight { color: #f9e2af; }
-
-#custom-gallery {
-    margin-left: 0.1px;
-    margin-right: 5px;
-    border-radius: 0.5rem 2rem 2rem 0.5rem;
-    color: #f5c2e7;
-    padding-left: 17px;
-    padding-right: 17px;
-}
-#custom-gallery:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
-
-#custom-docker  { color: #a6e3a1; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
-#custom-vscode  { color: #89b4fa; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
-#custom-terminal{ color: #8bd5ca; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
-#custom-google  { color: #94e2d5; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
-#custom-navicat { color: #fab387; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
-#custom-files   { color: #cba6f7; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
-#custom-docker:hover,
-#custom-vscode:hover,
-#custom-terminal:hover,
-#custom-google:hover,
-#custom-navicat:hover,
-#custom-files:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
-
-#custom-menuApp {
-    margin-left: 5px;
-    margin-right: 0px;
-    border-radius: 2rem 0.5rem 0.5rem 2rem;
-    color: #f38ba8;
-    transition: all 0.4s ease;
-    padding-right: 14px;
-}
-#custom-menuApp:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
-
-#custom-switcher {
-    margin-left: 0.1px;
-    margin-right: 0px;
-    border-radius: 0.5rem;
-    color: #d65d0e;
-    padding-left: 10px;
-    padding-right: 7px;
-}
-#custom-switcher:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
-
-#custom-power {
-    margin-left: 0.1px;
-    margin-right: 0px;
-    border-radius: 0.5rem 2rem 2rem 0.5rem;
-    color: #f38ba8;
-    padding-left: 20px;
-    padding-right: 23px;
-}
-#custom-power:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
-
-#pulseaudio {
-    margin-left: 0.1px;
-    margin-right: 0px;
-    border-radius: 2rem 0.5rem 0.5rem 2rem;
-    color: #f9e2af;
-    padding-left: 10px;
-    padding-right: 17px;
+#clock {
+    color: #83a598;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
-#network, #cpu, #memory, #temperature, #clock {
-    margin-left: 0.1px;
-    margin-right: 0px;
-    border-radius: 0.5rem;
-    padding-left: 17px;
-    padding-right: 17px;
-}
-#network { color: #f9e2af; }
-#cpu { color: #a6e3a1; }
-#memory { color: #8bd5ca; }
-#temperature { color: #f38ba8; }
-#clock { color: #89b4fa; }
-
-#memory:hover, #network:hover, #cpu:hover, #bluetooth:hover,
-#pulseaudio:hover, #clock:hover, #temperature:hover, #battery:hover {
-    color: #f38ba8;
-    border-radius: 1rem;
+/* =======================
+   HOVER EFFECT (UNIFIED)
+   ======================= */
+#memory:hover,
+#network:hover,
+#cpu:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#clock:hover,
+#temperature:hover,
+#battery:hover {
+    color: #fc433c;
+    background-color: #4a403d;
+    border-radius: 0.8rem;
 }
 
+/* =======================
+   WORKSPACES
+   ======================= */
 #workspaces {
-    background-color: rgba(49,50,68,0); /* semi-transparent */
-    border-radius: 2rem;
-    padding: 10px;
-    margin-left: 5px;
-    transition: all 0.5s ease-in-out;
+    background-color: #3c3836;
+    border-radius: 1.5rem;
+    padding: 4px;
+    margin: 3px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.35);
 }
 
 #workspaces button {
-    background-color: rgba(255,255,255,0.5); /* semi-transparent */
-    border-radius: 2rem;
-    padding: 0px;
-    margin-right: 5px;
-    transition: all 0.5s ease-out;
-    min-width: 22px;
+    background-color: #917669;
+    border-radius: 1.5rem;
+    margin-right: 3px;
+    min-width: 18px;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    min-width: 50px;
-    background-color: rgba(255,255,255,0.7); /* semi-transparent */
+    min-width: 40px;
+    background-color: #d79921;
 }
 
 #workspaces button:hover {
-    background-color: rgba(255,255,255,0.7); /* semi-transparent */
+    background-color: #d79921;
 }
 

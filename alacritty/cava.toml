@@ -1,8 +1,8 @@
 # Catppuccin Mocha Colors
 
 [colors.primary]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+background = "#3C3836"
+foreground = "#ec6b5c"
 
 [colors.normal]
 black   = "#45475a"

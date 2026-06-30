@@ -12,6 +12,7 @@
         "custom/walls",
         "custom/switcher",
         "custom/gallery",
+        "custom/animwalls",
         "custom/docker",
         "custom/vscode",
         "custom/terminal",
@@ -66,6 +67,12 @@
     "tooltip": false,
     "format": " 󰋩 ",
     "on-click": "~/walls/wallpaper-picker.py"
+}
+,
+  "custom/animwalls": {
+    "tooltip": false,
+    "format": " 󰕧 ",
+    "on-click": "~/awalls/anim-wallpaper-picker.py"
 }
 ,
   "custom/docker": {

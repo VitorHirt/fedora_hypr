@@ -1,5 +1,5 @@
 configuration {
-    icon-theme: "Zafiro-Nord-Black-Blue";
+    icon-theme: "Gruvbox-Plus-Dark";
     modi: "drun";
     show-icons: true;
     drun-display-format: "{name}";
@@ -7,12 +7,15 @@ configuration {
 }
 
 * {
-   background: rgba(255, 255, 255, 0.1);  
-    foreground: rgba(255, 255, 255, 0.5);  /* light grey */
-    background-alt: rgba(255, 255, 255, 0.1);   /* darker grey */
-    selected:  rgba(255, 255, 255, 0.1);                    /* medium grey */
-    active:  #9e9e9e;                      /* soft grey */
-    urgent:  #b85c5c;                      /* kept slightly red */
+    /* Gruvbox Colors */
+    background:        #3c3836;
+    background-alt:    #504945;
+    foreground:        #ebdbb2;
+    selected:          #d65d0e;
+    active:            #458588;
+    urgent:            #cc241d;
+
+    border-color:      #dd8d68;
 }
 
 window {
@@ -21,19 +24,18 @@ window {
     anchor: center;
     fullscreen: false;
 
-   width: 800px;
+      width: 800px;
     height: 460px;
 
     margin: 0px;
     padding: 20px;
 
-    border: 1px;
-    border-color: rgba(202,204,224,0.0);  /* fully transparent for no black border */
+    border: 0px;
     border-radius: 50px;
-    x-offset: 0px;
-    y-offset: 10px;
+       x-offset:0px;
+    y-offset:10px;
 
-    background-color: @background;   /* now RGBA for blur */
+    background-color: @background;
 }
 
 mainbox {
@@ -45,9 +47,8 @@ mainbox {
 inputbar {
      padding: 0px 0px;
     margin: 20px 40px;
-    background-color: transparent;
+    background-color: #282828;
 
-    border-color: @background;
     border-radius: 50px;
     spacing: 10px;
 
@@ -70,6 +71,7 @@ padding: 20px;
 }
 
 listview {
+    /* VERTICAL LIST */
     layout: vertical;
     lines: 15;
     columns: 3;
@@ -81,13 +83,13 @@ listview {
     dynamic: true;
     scrollbar: false;
 
-    background-color: transparent;   /* keep transparent for blur */
+    background-color: transparent;
 }
 
 scrollbar {
     handle-width: 5px;
     handle-color: @selected;
-    background-color: rgba(49,50,68,0.3);   /* @background-alt as RGBA */
+    background-color: @background-alt;
 }
 
 element {
@@ -106,7 +108,7 @@ element normal.normal {
 
 element selected.normal {
     background-color: @selected;
-    text-color: @foreground;   /* still RGBA now */
+    text-color: @background;
 }
 
 element-icon {
@@ -118,8 +120,9 @@ element-text {
     background-color: transparent;
     text-color: inherit;
     font: "JetBrainsMono Nerd Font 11";
-    vertical-align: 0.5;
-    horizontal-align: 0.0;
+      vertical-align:              0.5;
+    horizontal-align:            0.0;
     padding: 0px 10px 0px 20px; /* top right bottom left */
+
 }
 

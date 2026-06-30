@@ -1,0 +1,218 @@
+* {
+  all: unset;
+  font-family: FiraCode Nerd Font;
+  transition: 0.3s;
+  font-size: 1rem; /* smaller font */
+}
+
+.floating-notifications.background .notification-row {
+  padding: 1rem;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  border-radius: 1.5rem;
+  background-color: #3C3836; /* gruvbox dark bg */
+  color: #ebdbb2; /* gruvbox fg */
+  border: 0px solid #665c54; /* gruvbox gray border */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification {
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem; /* smaller font */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification.critical {
+  border: 0px solid #fb4934; /* red accent */
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content
+  .summary {
+  margin: 0.5rem;
+  color: #ebdbb2;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content
+  .body {
+  margin: 0.5rem;
+  color: #bdae93; /* light fg */
+  font-size: 0.95rem;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > * {
+  min-height: 3rem;
+  font-size: 1rem;
+}
+
+/* Notification actions */
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action {
+  border-radius: 1.5rem;
+  color: #ebdbb2;
+  background-color: #3c3836; /* dark gray bg */
+  border: 1px solid #665c54;
+  font-size: 0.95rem;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action:hover {
+  background-color: #504945;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .notification
+  > *:last-child
+  > *
+  .notification-action:active {
+  background-color: #665c54;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button {
+  margin: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 1.5rem;
+  color: #ebdbb2;
+  background-color: #fb4934; /* red close button */
+  font-size: 0.95rem;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button:hover {
+  color: #3C3836;
+}
+
+.floating-notifications.background
+  .notification-row
+  .notification-background
+  .close-button:active {
+  background-color: #fabd2f; /* yellow active */
+}
+
+/* CONTROL CENTER */
+.control-center {
+  border-radius: 1.5rem;
+  margin: 1rem;
+  background-color: #3C3836;
+  color: #ec6b5c;
+  padding: 1rem;
+  border: 0px solid #665c54;
+  font-size: 1rem;
+    transition: 0.3s;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
+
+}
+
+.control-center .widget-title {
+  color: #fabd2f; /* yellow */
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.control-center .widget-title button {
+  border-radius: 1.5rem;
+  color: #ebdbb2;
+  background-color: #4e4946;
+  border: 0px solid #665c54;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.control-center .widget-title button:hover {
+  background-color: #635045;
+}
+
+.control-center .widget-title button:active {
+  background-color: #665c54;
+}
+
+.control-center .notification-row .notification-background {
+  border-radius: 1.5rem;
+  margin: 0.5rem 0;
+  background-color: #665c54;
+  color: #fb4934;
+  border: 0px solid #665c54;
+  font-size: 1rem;
+}
+
+.control-center .notification-row .notification-background .notification {
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification.critical {
+  border: 1px solid #fb4934;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content {
+  color: #ebdbb2;
+  font-size: 0.95rem;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content
+  .summary {
+  margin: 0.5rem;
+  color: #ebdbb2;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.control-center
+  .notification-row
+  .notification-background
+  .notification
+  .notification-content
+  .body {
+  margin: 0.5rem;
+  color: #bdae93;
+  font-size: 0.95rem;
+}

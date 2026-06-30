@@ -1,0 +1,206 @@
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 15px;
+    min-height: 0;
+}
+
+#waybar {
+background-color: rgba(47, 47, 47, 0.776);
+    color: #4c4c4c;
+    margin: 5px 5px;
+}
+
+#bluetooth,
+#temperature,
+#custom-gallery,
+#custom-docker,
+#custom-vscode,
+#custom-terminal,
+#custom-google,
+#custom-navicat,
+#custom-files,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#custom-menuApp,
+#custom-power,
+#custom-switcher,
+#workspaces {
+background-color: rgba(255, 255, 255, 0);
+    padding: 9px;
+    margin: 0px;
+    margin-top: 3px;
+    transition: all 0.4s ease;
+}
+
+#bluetooth {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem;
+    color: #d2d2d2;
+    padding-left: 17px;
+    padding-right: 17px;
+    border: 5px;
+}
+#bluetooth.off { color: #000000; }
+#bluetooth.on { color: #4c4c4c; }
+#bluetooth.disabled { color: #000000; }
+
+#battery {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem;
+    color: #d2d2d2;
+    padding-left: 0px;
+    padding-right: 15px;
+}
+#battery.charging { color: #d2d2d2; }
+#battery.warning:not(.charging) { color: #d2d2d2; }
+
+#backlight { color: #d2d2d2; }
+
+#custom-gallery {
+    margin-left: 0.1px;
+    margin-right: 5px;
+    border-radius: 0.5rem 2rem 2rem 0.5rem;
+    color: #d2d2d2;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+#custom-gallery:hover {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#custom-docker,
+#custom-vscode,
+#custom-terminal,
+#custom-google,
+#custom-navicat,
+#custom-files {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem;
+    color: #d2d2d2;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+#custom-docker:hover,
+#custom-vscode:hover,
+#custom-terminal:hover,
+#custom-google:hover,
+#custom-navicat:hover,
+#custom-files:hover {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#custom-menuApp {
+    margin-left: 5px;
+    margin-right: 0px;
+    border-radius: 2rem 0.5rem 0.5rem 2rem;
+    color: #d2d2d2;
+    transition: all 0.4s ease;
+    padding-right: 14px;
+}
+#custom-menuApp:hover {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#custom-switcher {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem;
+    color: #d2d2d2;
+    padding-left: 10px;
+    padding-right: 7px;
+}
+#custom-switcher:hover {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#custom-power {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem 2rem 2rem 0.5rem;
+    color: #d2d2d2;
+    padding-left: 20px;
+    padding-right: 23px;
+}
+#custom-power:hover {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#pulseaudio {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 2rem 0.5rem 0.5rem 2rem;
+    color: #d2d2d2;
+    padding-left: 10px;
+    padding-right: 17px;
+}
+
+#network,
+#cpu,
+#memory,
+#temperature,
+#clock {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+#network { color: #d2d2d2; }
+#cpu { color: #d2d2d2; }
+#memory { color: #d2d2d2; }
+#temperature { color: #d2d2d2; }
+#clock { color: #d2d2d2; }
+
+#memory:hover,
+#network:hover,
+#cpu:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#clock:hover,
+#temperature:hover,
+#battery:hover {
+    color: #d2d2d2;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ================= WORKSPACES ================= */
+
+#workspaces {
+background-color: rgba(255, 255, 255, 0);
+    border-radius: 2rem;
+    padding: 10px;
+    margin-left: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+#workspaces button {
+background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2rem;
+    padding: 0px;
+    margin-right: 5px;
+    transition: all 0.5s ease-out;
+    min-width: 22px;
+}
+
+#workspaces button.active {
+    min-width: 50px;
+background-color: rgba(255, 255, 255, 0.6);
+}
+
+#workspaces button:hover {
+    background-color: #e6e6e6;
+}
+

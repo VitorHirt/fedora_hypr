@@ -1,0 +1,62 @@
+* {
+    background-image: none;
+    transition: 60ms;
+}
+
+window {
+    background-color: rgba(40, 40, 40, 0.85); /* bg gruvbox */
+}
+
+button {
+    color: #ebdbb2; /* fg */
+    background-color: #3c3836; /* bg1 */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #504945;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    margin: 10px;
+}
+
+button:focus, button:active, button:hover {
+    background-color: #d79921; /* yellow */
+    border-color: #d79921;
+    color: #282828;
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"));
+}
+#lock:focus, #lock:hover {
+    background-color: #458588; /* blue */
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"));
+}
+#logout:focus, #logout:hover {
+    background-color: #cc241d; /* red */
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"));
+}
+#hibernate:focus, #hibernate:hover {
+    background-color: #689d6a; /* aqua */
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
+}
+#shutdown:focus, #shutdown:hover {
+    background-color: #cc241d; /* red */
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
+}
+#reboot:focus, #reboot:hover {
+    background-color: #d65d0e; /* orange */
+}

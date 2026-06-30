@@ -1,0 +1,51 @@
+# Catppuccin Mocha Alacritty Theme (Darker Version)
+
+[colors.primary]
+background = "#DCE0E8"  # much darker than DCE0E8
+foreground = "#6e77a1"  # darker than cdd6f4
+
+[colors.normal]
+black   = "#51556b"
+red     = "#C94F69"
+green   = "#5c8f68"
+yellow  = "#927f61"
+blue    = "#576a96"
+magenta = "#7b5e96"
+cyan    = "#4e817a"
+white   = "#4d5672"
+
+[colors.bright]
+black   = "#aaadc2"
+red     = "#77444f"
+green   = "#568561"
+yellow  = "#837157"
+blue    = "#5a6a8f"
+magenta = "#7e6694"
+cyan    = "#5f968e"
+white   = "#4c516d"
+
+[colors.dim]
+black   = "#9b9dbb"
+red     = "#7e565b"
+green   = "#507559"
+yellow  = "#85795b"
+blue    = "#4e5a70"
+magenta = "#795a85"
+cyan    = "#587c77"
+white   = "#4c5169"
+
+# ----- Window Settings -----
+
+[window.dimensions]
+columns = 70
+lines = 17
+
+[window.padding]
+x = 70
+y = 70
+
+# ----- Font -----
+
+[font]
+size = 10.0
+

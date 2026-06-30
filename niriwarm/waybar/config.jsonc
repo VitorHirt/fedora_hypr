@@ -1,0 +1,212 @@
+{
+    "layer": "top",
+    "position": "top",
+
+    "modules-left": [
+
+      
+
+    ],
+    "modules-center": [       
+  "custom/menuApp",
+        "custom/walls",
+        "custom/switcher",
+        "custom/gallery",
+        "custom/docker",
+        "custom/vscode",
+        "custom/terminal",
+        "custom/google",
+        "custom/navicat",
+        "custom/files",
+        "pulseaudio",
+        "bluetooth",
+        "cpu",
+        "memory",
+        "network",
+        "temperature",
+        "battery",
+        "clock",
+        "custom/power",
+        "hyprland/workspaces"
+        ],
+    "modules-right": [
+        
+
+        
+
+
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "sort-by-name": true,
+        "format": " {icon} ",
+        "persistent-workspaces": {
+        "*": 4
+    },
+        "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "urgent": "",
+        "focused": "",
+        "inactive": "",
+        "empty": ""
+        },
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-click": "activate"
+    },
+
+
+  "custom/gallery": {
+    "tooltip": false,
+    "format": " 󰋩 ",
+    "on-click": "~/walls/wallpaper-picker.py"
+}
+,
+  "custom/docker": {
+    "tooltip": false,
+    "format": " 󰡨 ",
+    "on-click": "systemctl --user is-active --quiet docker-desktop && systemctl --user stop docker-desktop || systemctl --user start docker-desktop"
+}
+,
+  "custom/vscode": {
+    "tooltip": false,
+    "format": " 󰨞 ",
+    "on-click": "flatpak run com.visualstudio.code"
+}
+,
+  "custom/terminal": {
+    "tooltip": false,
+    "format": "  ",
+    "on-click": "alacritty"
+}
+,
+  "custom/google": {
+    "tooltip": false,
+    "format": " 󰊯 ",
+    "on-click": "google-chrome-stable"
+}
+,
+  "custom/navicat": {
+    "tooltip": false,
+    "format": " 󰆼 ",
+    "on-click": "gtk-launch Navicat.Premium.17"
+}
+,
+  "custom/files": {
+    "tooltip": false,
+    "format": " 󰉋 ",
+    "on-click": "nemo"
+}
+,
+    "bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": "  ",
+	"format-disabled": "  ", // an empty format will hide the module
+	"format-connected": " {num_connections} connected",
+	
+    "on-click": "~/.config/alacritty/bluetoothrun.sh"
+    },
+    "clock": {
+    "timezone": "Brazil/Sao_Paulo",
+    "format": "{:%I:%M %p}",                 // shows only time
+    "tooltip": true,
+    "tooltip-format": "{:%a %d %b}",         // shows only date
+    "on-click": "swaync-client -t"
+}
+,
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "   {icon} ",
+        "format-charging": "  {icon} ",
+        "format-plugged":  "  {icon} ",
+         "tooltip-format": "{capacity}%",
+          "format-icons": [
+        
+        "", "", "", "", ""
+    ]
+    },
+    
+  "temperature": {
+    "tooltip": true,
+    "format": "{icon} ",
+    "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
+     "tooltip-format": "{temperatureC}°C"
+}
+,
+    "pulseaudio": {
+         "scroll-step": 10, // %, can be a float
+        "format": "  {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": [
+        "▁",  // 0-16%
+        "▂",  // 17-32%
+        "▃",  // 33-48%
+        "▄",  // 49-64%
+        "▅",  // 65-80%
+        "▆",  // 81-96%
+        "▇"   // 97-100%
+    ]
+        },
+                "tooltip-format": "{volume}%",
+
+        "on-click": "~/.config/alacritty/audiotop.sh"
+    },
+   
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "~/.config/rofi/power.sh",
+        "format": ""
+    },
+
+    "custom/menuApp": {
+        "tooltip": false,
+        "on-click": "~/.config/rofi/launcher.sh",
+        "format": "  "
+    },
+ 
+ "custom/switcher": {
+        "tooltip": false,
+        "on-click": "~/.config/rofi/switcher.sh",
+        "format": " 󰸱  "
+    },
+    "cpu": {
+         "interval": 1,
+         "format": "{icon} ",  // overall icon, not per-core
+         "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
+         
+         "on-click": "~/.config/alacritty/btmrun.sh"
+       
+    },
+   "memory": {
+    "interval": 1,
+    "format": "{icon} ",
+    "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
+    "tooltip": true,
+    "tooltip-format": "{}%",
+    "on-click": "~/.config/alacritty/btmrun.sh"
+}
+,
+   "network": {
+    "format-wifi": " {icon} ",
+    "interval": 1,
+    "format-ethernet": "Ethernet",
+    "tooltip-format": "{essid} {signalStrength}%",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "on-click": "~/.config/alacritty/wifirun.sh"
+}
+
+
+}

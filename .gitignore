@@ -1,0 +1,36 @@
+# ~/.config dotfiles — ignore browser profiles, app state and anything with secrets.
+# These dirs hold cookies, saved passwords, caches and gigabytes of model/cache blobs.
+
+# Browser profiles (cookies, Login Data, caches, on-device model blobs)
+google-chrome/
+chromium/
+BraveSoftware/
+microsoft-edge/
+opera/
+vivaldi/
+mozilla/
+
+# App state / potential credentials
+Docker Desktop/
+docker-secrets-engine/
+navicat/
+evolution/
+
+# Runtime state, not real config
+pulse/
+ibus/
+
+# Generic caches / volatile state (defensive)
+**/Cache/
+**/Code Cache/
+**/GPUCache/
+**/GraphiteDawnCache/
+**/DawnGraphiteCache/
+**/DawnWebGPUCache/
+**/Service Worker/
+**/IndexedDB/
+**/*Cache*/
+**/Cookies
+**/Cookies-journal
+**/*.log
+**/*.ldb

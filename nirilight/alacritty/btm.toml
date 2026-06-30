@@ -1,0 +1,42 @@
+# Colors (Catppuccin Latte)
+
+# Default colors
+[colors.primary]
+background = "#DCE0E8"
+foreground = "#44486b"
+
+# Normal colors
+[colors.normal]
+black   = "#696d8f"
+red     = "#915859"
+green   = "#54754c"
+yellow  = "#b3884c"
+blue    = "#4d628d"
+magenta = "#8c70b3"
+cyan    = "#4e787a"
+white   = "#5a6988"
+
+# Bright colors
+[colors.bright]
+black   = "#8185a8"
+red     = "#795354"
+green   = "#597453"
+yellow  = "#7c6e5a"
+blue    = "#8c97b1"
+magenta = "#685a7a"
+cyan    = "#537072"
+white   = "#8588ad"
+
+# Window dimensions
+[window.dimensions]
+columns = 70
+lines = 17
+
+# Window padding
+[window.padding]
+x = 30
+y = 30
+
+# Font
+[font]
+size = 10.0

@@ -1,0 +1,60 @@
+{
+  // Fastfetch Config - Archey style without IP display
+
+  "logo": {
+    "type": "auto"
+  },
+
+  "display": {
+    "separator": "     "
+  },
+
+  "modules": [
+    {
+      "type": "title"
+    },
+    {
+      "type": "os"
+    },
+    {
+      "type": "host"
+    },
+    {
+      "type": "kernel"
+    },
+    {
+      "type": "uptime"
+    },
+    {
+      "type": "packages"
+    },
+    {
+      "type": "shell"
+    },
+    {
+      "type": "terminal"
+    },
+    {
+      "type": "wm"
+    },
+    {
+      "type": "cpu"
+    },
+    {
+      "type": "gpu"
+    },
+    {
+      "type": "memory"
+    },
+    {
+      "type": "disk"
+    },
+
+    // Network module WITHOUT IP addresses
+    {
+      "type": "network",
+      "showIp": false
+    }
+  ]
+}
+

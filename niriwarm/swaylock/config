@@ -1,0 +1,55 @@
+# === Screenshot + Blur (efeito de "fundo desfocado") ===
+screenshots
+effect-blur=9x4
+effect-vignette=0.4:0.4
+fade-in=0.3
+
+# === Fonte ===
+font=JetBrainsMono Nerd Font
+font-size=22
+clock
+timestr=%H:%M
+datestr=%a, %d of %B
+
+# === Indicador (anel translúcido) ===
+indicator
+indicator-radius=150
+indicator-thickness=7
+# indicator-x-position=0
+# indicator-y-position=0
+indicator-x-position=960
+indicator-y-position=540
+
+# === Cores Gruvbox com transparência ===
+inside-color=28282800
+inside-clear-color=d7992140
+inside-caps-lock-color=cc241d40
+inside-ver-color=689d6a40
+inside-wrong-color=cc241d40
+
+ring-color=ebdbb299
+ring-clear-color=d79921
+ring-caps-lock-color=cc241d
+ring-ver-color=689d6a
+ring-wrong-color=cc241d
+
+line-color=00000000
+line-clear-color=00000000
+line-caps-lock-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+
+separator-color=00000000
+
+key-hl-color=98971a
+bs-hl-color=cc241d
+
+text-color=ebdbb2
+text-clear-color=282828
+text-caps-lock-color=ebdbb2
+text-ver-color=282828
+text-wrong-color=ebdbb2
+
+# Esconde textos desnecessários, deixa só o relógio
+hide-keylayout
+ignore-empty-password

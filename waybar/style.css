@@ -1,0 +1,171 @@
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 15px;
+    min-height: 0;
+}
+
+#waybar {
+    background-color: rgb(49, 50, 68); /* semi-transparent */
+    color: #cdd6f4;
+    margin: 5px 5px;
+}
+
+#bluetooth,
+#temperature,
+#custom-gallery,
+#custom-docker,
+#custom-vscode,
+#custom-terminal,
+#custom-google,
+#custom-navicat,
+#custom-files,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#custom-menuApp,
+#custom-power,
+#custom-switcher,
+#workspaces {
+    background-color: rgba(49,50,68,0); /* semi-transparent */
+    padding: 9px;
+    margin: 0px;
+    margin-top: 3px;
+    transition: all 0.4s ease;
+}
+
+#bluetooth {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: #f38ba8;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+#bluetooth.off { color: #8bd5ca; }
+#bluetooth.on { color: #a6e3a1; }
+#bluetooth.disabled { color: #8bd5ca; }
+
+#battery {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem;
+    color: #f9e2af;
+    padding-left: 0px;
+    padding-right: 15px;
+}
+#battery.charging { color: #a6e3a1; }
+#battery.warning:not(.charging) { color: #f38ba8; }
+
+#backlight { color: #f9e2af; }
+
+#custom-gallery {
+    margin-left: 0.1px;
+    margin-right: 5px;
+    border-radius: 0.5rem 2rem 2rem 0.5rem;
+    color: #f5c2e7;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+#custom-gallery:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
+
+#custom-docker  { color: #a6e3a1; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
+#custom-vscode  { color: #89b4fa; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
+#custom-terminal{ color: #8bd5ca; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
+#custom-google  { color: #94e2d5; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
+#custom-navicat { color: #fab387; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
+#custom-files   { color: #cba6f7; padding-left: 7px; padding-right: 7px; border-radius: 0.5rem; }
+#custom-docker:hover,
+#custom-vscode:hover,
+#custom-terminal:hover,
+#custom-google:hover,
+#custom-navicat:hover,
+#custom-files:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
+
+#custom-menuApp {
+    margin-left: 5px;
+    margin-right: 0px;
+    border-radius: 2rem 0.5rem 0.5rem 2rem;
+    color: #f38ba8;
+    transition: all 0.4s ease;
+    padding-right: 14px;
+}
+#custom-menuApp:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
+
+#custom-switcher {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem;
+    color: #d65d0e;
+    padding-left: 10px;
+    padding-right: 7px;
+}
+#custom-switcher:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
+
+#custom-power {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem 2rem 2rem 0.5rem;
+    color: #f38ba8;
+    padding-left: 20px;
+    padding-right: 23px;
+}
+#custom-power:hover { border-radius: 1rem; background-color: rgba(69,71,90,0.55); }
+
+#pulseaudio {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 2rem 0.5rem 0.5rem 2rem;
+    color: #f9e2af;
+    padding-left: 10px;
+    padding-right: 17px;
+}
+
+#network, #cpu, #memory, #temperature, #clock {
+    margin-left: 0.1px;
+    margin-right: 0px;
+    border-radius: 0.5rem;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+#network { color: #f9e2af; }
+#cpu { color: #a6e3a1; }
+#memory { color: #8bd5ca; }
+#temperature { color: #f38ba8; }
+#clock { color: #89b4fa; }
+
+#memory:hover, #network:hover, #cpu:hover, #bluetooth:hover,
+#pulseaudio:hover, #clock:hover, #temperature:hover, #battery:hover {
+    color: #f38ba8;
+    border-radius: 1rem;
+}
+
+#workspaces {
+    background-color: rgba(49,50,68,0); /* semi-transparent */
+    border-radius: 2rem;
+    padding: 10px;
+    margin-left: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+#workspaces button {
+    background-color: rgba(255,255,255,0.5); /* semi-transparent */
+    border-radius: 2rem;
+    padding: 0px;
+    margin-right: 5px;
+    transition: all 0.5s ease-out;
+    min-width: 22px;
+}
+
+#workspaces button.active {
+    min-width: 50px;
+    background-color: rgba(255,255,255,0.7); /* semi-transparent */
+}
+
+#workspaces button:hover {
+    background-color: rgba(255,255,255,0.7); /* semi-transparent */
+}
+

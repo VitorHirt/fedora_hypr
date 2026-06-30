@@ -1,0 +1,75 @@
+configuration {
+    show-icons: false;
+}
+
+* {
+
+    background: #3c3836;
+    background-alt: #4d423d;
+    selected: #d65d0e;
+    active:  #458588;
+    urgent:  #B7251E;
+    border-color: #dd8d68;
+}
+
+
+window {
+    transparency: "real";
+    location:north;
+    anchor: center;
+    fullscreen:false;
+    width:  530px;
+    height: 200px;
+
+    border-radius: 100px;
+    border:0px;
+
+    background-color: @background;
+    padding:20px;
+     x-offset:0px;
+    y-offset:10px;
+}
+
+mainbox {
+    background-color: transparent;
+    orientation: vertical;
+    children: [ "listview" ];
+}
+
+listview {
+    enabled:true;
+    columns: 3;
+    lines: 3;
+    spacing:20px;
+    margin: 10px;
+    layout: horizontal;
+    dynamic:false;
+    background-color: transparent;
+    cursor: "default";
+}
+
+element {
+    enabled:true;
+    padding:40 30px;
+
+    border-radius:100px;
+    background-color: @background-alt;
+    text-color: #ebdbb2;
+    cursor: pointer;
+}
+
+element-text {
+    font: "Font Awesome 6 Free Solid 40";
+    background-color: transparent;
+    text-color:  inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    cursor: pointer;
+}
+
+element selected.normal {
+    background-color: var(selected);
+    text-color:  var(background);
+}
+
+

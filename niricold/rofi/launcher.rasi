@@ -1,0 +1,125 @@
+configuration {
+    icon-theme: "Zafiro-Nord-Black-Blue";
+    modi: "drun";
+    show-icons: true;
+    drun-display-format: "{name}";
+    display-drun: " ";    /* search icon instead of text */
+}
+
+* {
+   background: rgba(255, 255, 255, 0.1);  
+    foreground: rgba(255, 255, 255, 0.5);  /* light grey */
+    background-alt: rgba(255, 255, 255, 0.1);   /* darker grey */
+    selected:  rgba(255, 255, 255, 0.1);                    /* medium grey */
+    active:  #9e9e9e;                      /* soft grey */
+    urgent:  #b85c5c;                      /* kept slightly red */
+}
+
+window {
+    transparency: "real";
+    location: north;
+    anchor: center;
+    fullscreen: false;
+
+   width: 800px;
+    height: 460px;
+
+    margin: 0px;
+    padding: 20px;
+
+    border: 1px;
+    border-color: rgba(202,204,224,0.0);  /* fully transparent for no black border */
+    border-radius: 50px;
+    x-offset: 0px;
+    y-offset: 10px;
+
+    background-color: @background;   /* now RGBA for blur */
+}
+
+mainbox {
+    spacing: 20px;
+    background-color: transparent;
+    children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+     padding: 0px 0px;
+    margin: 20px 40px;
+    background-color: transparent;
+
+    border-color: @background;
+    border-radius: 50px;
+    spacing: 10px;
+
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+padding: 20px;
+    border-radius: 50px;
+    text-color: @foreground;
+    background-color: inherit;
+}
+
+entry {
+padding: 20px;
+    border-radius: 50px;
+    text-color: @foreground;
+    background-color: inherit;
+    placeholder: "  ";
+}
+
+listview {
+    layout: vertical;
+    lines: 15;
+    columns: 3;
+
+    spacing: 10px;
+    margin: 10px 0;
+    padding: 0px;
+
+    dynamic: true;
+    scrollbar: false;
+
+    background-color: transparent;   /* keep transparent for blur */
+}
+
+scrollbar {
+    handle-width: 5px;
+    handle-color: @selected;
+    background-color: rgba(49,50,68,0.3);   /* @background-alt as RGBA */
+}
+
+element {
+    padding: 12px;
+    border-radius: 100px;
+
+    background-color: transparent;
+    text-color: @foreground;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @foreground;   /* still RGBA now */
+}
+
+element-icon {
+    size: 47px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    font: "JetBrainsMono Nerd Font 11";
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    padding: 0px 10px 0px 20px; /* top right bottom left */
+}
+

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-# Animated wallpaper picker — mirrors ~/walls/wallpaper-picker.py, but the
-# thumbnails are extracted from videos with ffmpeg and the wallpaper is applied
-# (and the previous one stopped) with mpvpaper.
+# Animated wallpaper picker — a 1:1 clone of ~/walls/wallpaper-picker.py (same
+# circular thumbnails, same horizontal scroll, same CSS), but the thumbnails are
+# extracted from videos with ffmpeg and the wallpaper is applied with mpvpaper,
+# stopping the previous one before starting the new clip.
 import gi, os, subprocess, sys, signal, cairo, hashlib
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GdkPixbuf, Gdk, GLib
@@ -34,10 +35,10 @@ THUMB_DIR  = os.path.expanduser("~/.cache/anim-wallpaper-thumbs")
 STATE_FILE = os.path.expanduser("~/.cache/anim-wallpaper-current")
 VIDEO_EXTS = (".mp4", ".webm", ".mkv", ".mov", ".gif", ".m4v", ".avi")
 
-THUMB_SIZE     = 200                # Diameter of circular thumbnail
-SCROLL_STEP    = THUMB_SIZE + 20    # Scroll by one thumbnail width
-BUTTON_PADDING = 20                 # Padding inside buttons
-BOX_MARGIN     = 40                 # Padding around the full row
+THUMB_SIZE     = 200               # Diameter of circular thumbnail
+SCROLL_STEP    = THUMB_SIZE + 20   # Scroll by one thumbnail width
+BUTTON_PADDING = 20                # Padding inside buttons
+BOX_MARGIN     = 40                # Padding around the full row
 
 # mpv options for the wallpaper: muted, looping forever, hw decode, fill screen.
 MPV_OPTS = "no-audio --loop-file=inf --hwdec=auto --panscan=1.0"
@@ -46,7 +47,6 @@ os.makedirs(THUMB_DIR, exist_ok=True)
 
 # ---------------- Helpers ----------------
 def thumb_path(filepath):
-    # Cache key = absolute path + mtime, so it refreshes when the file changes.
     key = f"{filepath}:{os.path.getmtime(filepath)}"
     return os.path.join(THUMB_DIR, hashlib.md5(key.encode()).hexdigest() + ".png")
 
@@ -145,24 +145,26 @@ scrolled.add(hbox)
 
 # ---------------- CSS ----------------
 css = f"""
-window {{ background: transparent; }}
-scrolledwindow {{ background: transparent; }}
+window {{ background: #3c3836; }}
+scrolledwindow {{ background: #3c3836; }}
 button {{
     border: 0;
-    background: transparent;
+    background: #3c3836;
     padding-left: {BUTTON_PADDING}px;
     padding-right: {BUTTON_PADDING}px;
-    border-radius: {THUMB_SIZE}px;      /* make hover circular */
+    border-radius: {THUMB_SIZE//1}px;      /* make circular */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* shadow for thumbnails */
 }}
 button:hover {{
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: {THUMB_SIZE}px;
+    background-color: #282828;
+    border-radius: {THUMB_SIZE//1}px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6); /* stronger shadow on hover */
 }}
 button:focus {{
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
     outline: none;
-    box-shadow: none;
-    border-radius: {THUMB_SIZE}px;
+    border-radius: {THUMB_SIZE//1}px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6); /* keep shadow on focus */
 }}
 label {{ color: #ffffff; font-size: 16px; }}
 """

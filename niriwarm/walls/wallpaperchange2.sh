@@ -33,6 +33,9 @@ while true; do
     fi
 done
 
+# Stop any animated wallpaper (mpvpaper) before applying the static one
+pkill -x mpvpaper 2>/dev/null
+
 # Apply the wallpaper
 swaybg -i "$RANDOM_WALLPAPER" -m fill &
 

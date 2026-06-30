@@ -37,6 +37,7 @@
 #bluetooth,
 #temperature,
 #custom-gallery,
+#custom-animwalls,
 #clock,
 #battery,
 #pulseaudio,
@@ -90,6 +91,12 @@
     padding-right: 5px;
 }
 
+#custom-animwalls {
+    color: #d65d0e;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
 #custom-docker {
     color: #b8bb26;
     padding-left: 7px;
@@ -126,6 +133,7 @@
     padding-right: 5px;
 }
 
+#custom-animwalls:hover,
 #custom-docker:hover,
 #custom-vscode:hover,
 #custom-navicat:hover,

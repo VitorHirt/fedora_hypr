@@ -28,6 +28,12 @@ BOX_MARGIN = 40                             # Padding around the full row
 
 # ---------------- Helpers ----------------
 def apply_wallpaper(filepath):
+    # Stop any animated wallpaper (mpvpaper) and forget it, so the static pick sticks.
+    subprocess.run(["pkill", "-x", "mpvpaper"])
+    try:
+        os.remove(os.path.expanduser("~/.cache/anim-wallpaper-current"))
+    except FileNotFoundError:
+        pass
     subprocess.Popen(["swaybg", "-i", filepath, "-m", "fill"])
 
 def smooth_scroll_to(scrolled, target_x):

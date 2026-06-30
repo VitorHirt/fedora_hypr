@@ -13,6 +13,7 @@ background-color: rgba(47, 47, 47, 0.776);
 #bluetooth,
 #temperature,
 #custom-gallery,
+#custom-animwalls,
 #custom-docker,
 #custom-vscode,
 #custom-terminal,
@@ -88,6 +89,13 @@ background-color: rgba(255, 255, 255, 0);
     padding-left: 7px;
     padding-right: 7px;
 }
+#custom-animwalls {
+    color: #d2d2d2;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+
+#custom-animwalls:hover,
 #custom-docker:hover,
 #custom-vscode:hover,
 #custom-terminal:hover,

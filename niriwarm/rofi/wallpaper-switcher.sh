@@ -40,6 +40,8 @@ SELECTED=$(echo -e "$ROFI_INPUT" | rofi -show run -theme "$THEME" -i -p "Select 
 
 # Apply the selected wallpaper
 if [[ -n "$SELECTED" ]]; then
+    pkill -x mpvpaper 2>/dev/null
+    rm -f "$HOME/.cache/anim-wallpaper-current"
     if [[ "$SELECTED" == "Random" ]]; then
         RANDOM_PIC=${PICS[ $RANDOM % ${#PICS[@]} ]}
         swaybg -i "$WALL_DIR/$RANDOM_PIC" -m fill &

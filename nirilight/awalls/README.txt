@@ -1,19 +1,24 @@
-Animated wallpapers
-===================
+Animated wallpapers (per theme)
+===============================
 
-Drop your animated wallpapers in this folder (~/awalls):
-  .mp4  .webm  .mkv  .mov  .gif  .m4v  .avi
+Works just like the static ~/walls: each theme keeps its OWN animated
+wallpapers in its source folder:
 
-Open the picker with the F9 key, or the film icon (󰕧) on Waybar.
-It is a GTK picker with the SAME look as the static ~/walls/wallpaper-picker.py
-(big circular thumbnails, horizontal scroll). The thumbnails are extracted from
-the videos with ffmpeg; selecting one stops the current wallpaper and starts the
-new one with mpvpaper.
+    ~/.config/niricold/awalls/
+    ~/.config/nirilight/awalls/
+    ~/.config/niriwarm/awalls/
 
-Files:
-  ~/awalls/anim-wallpaper-picker.py   -> the picker (GTK + ffmpeg + mpvpaper)
-  ~/awalls/anim-wallpaper-restore.sh  -> re-applies the last clip on login
+Applying a theme (apply<theme>.sh) does:  rm -rf ~/awalls ; cp -r <theme>/awalls ~/
+so ~/awalls always holds the CURRENT theme's videos.
 
-Requirements: mpvpaper, mpv, ffmpeg, python3-gobject (gtk3).
-Per-theme copies live in ~/.config/<theme>/awalls and are deployed by the
-apply<theme>.sh scripts.
+To add/remove a wallpaper for a theme, edit that theme's source folder above,
+then re-apply the theme. (Putting a file only in ~/awalls is temporary — the
+next theme switch overwrites it.)
+
+Supported: .mp4 .webm .mkv .mov .gif .m4v .avi
+Open the picker with F9 or the film icon (󰕧) on Waybar.
+Picking one stops the current wallpaper and starts the new one with mpvpaper.
+
+Files kept in every awalls folder:
+  anim-wallpaper-picker.py   -> the picker (GTK + ffmpeg + mpvpaper)
+  anim-wallpaper-restore.sh  -> re-applies the last clip on login
